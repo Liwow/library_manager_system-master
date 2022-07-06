@@ -1,23 +1,21 @@
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.ljc.model
-
-# 默认是8080端口 , 配置为80端口在浏览器访问时不需要输入端口号
 server:
   port: 8080
 
 spring:
-  # 用户名 密码 需要根据实际情况修改
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/library_manager_system?useUnicode=true&serverTimezone=UTC&characterEncoding=utf-8&useSSL=false
     username: root
-    password:root
+    password: root
+  resources:
+    chain:
+      cache: true
   mvc:
     view:
       prefix: classpath:/templates/
       suffix: .html
     static-path-pattern: /static/**
-  resources:
-    chain:
-      cache: true
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.ljc.model
