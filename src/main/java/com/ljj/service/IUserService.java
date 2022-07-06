@@ -1,6 +1,5 @@
 package com.ljj.service;
 
-import com.ljj.domain.Department;
 import com.ljj.domain.User;
 import com.ljj.domain.Vo.BorrowingBooksVo;
 import com.ljj.utils.page.Page;
