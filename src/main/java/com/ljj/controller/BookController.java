@@ -51,8 +51,10 @@ public class BookController {
     @RequestMapping("/showBooksResultPageByCategoryId")
     public String showBooksResultPageByCategoryId(@RequestParam("pageNum") int pageNum, @RequestParam("bookCategory") int bookCategory, Model model) {
         Page<BookVo> page = bookService.findBooksByCategoryId(bookCategory, pageNum);
+        List<BookCategory> categories = bookCategoryService.selectAllBookCategories();
         model.addAttribute("page", page);
         model.addAttribute("bookCategory", bookCategory);
+        model.addAttribute("categories",categories);
         return "admin/showBooks";
     }
 
@@ -91,7 +93,9 @@ public class BookController {
     @RequestMapping("/addBookCategory")
     @ResponseBody
     public String addBookCategory(BookCategory bookCategory) {
+        System.out.println("1111");
         boolean b = adminService.addBookCategory(bookCategory);
+        System.out.println("xxxxx");
         if (b) {
             return "true";
         }

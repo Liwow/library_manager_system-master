@@ -2,10 +2,9 @@ package com.ljj.mapper;
 
 import com.ljj.domain.BookCategory;
 import com.ljj.domain.BookCategoryExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-
-import org.apache.ibatis.annotations.Param;
 
 public interface BookCategoryMapper {
     long countByExample(BookCategoryExample example);
@@ -34,4 +33,6 @@ public interface BookCategoryMapper {
     List<BookCategory> selectByPageNum(@Param("currIndex") int currIndex, @Param("pageSize") int pageSize);
 
     int selectAllCount();
+
+    List<BookCategory> selectAllBookCategories();
 }

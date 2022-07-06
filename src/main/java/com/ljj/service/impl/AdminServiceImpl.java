@@ -75,6 +75,7 @@ public class AdminServiceImpl implements IAdminService {
     @Override
     public boolean addBookCategory(BookCategory bookCategory) {
         int n = bookCategoryMapper.insert(bookCategory);
+        System.out.println("n");
         if (n > 0) {
             return true;
         }

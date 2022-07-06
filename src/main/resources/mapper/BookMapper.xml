@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zbw.mapper.BookMapper">
+<mapper namespace="com.ljj.mapper.BookMapper">
     <resultMap id="BaseResultMap" type="com.ljj.domain.Book">
         <id column="book_id" jdbcType="INTEGER" property="bookId"/>
         <result column="book_name" jdbcType="VARCHAR" property="bookName"/>

@@ -16,7 +16,7 @@ $(document).ready(function () {
     let lab2 = $("#lab2").html().trim();//获取总页码
 
     $("#prePage").click(function () {
-        if (lab1 == 1) {
+        if (lab1 === 1) {
             layer.msg("已经是最后一页了!", {icon: 7});
             return false;
         }
@@ -24,7 +24,7 @@ $(document).ready(function () {
     });
 
     $("#nextPage").click(function () {
-        if (lab1 == lab2) {
+        if (lab1 === lab2) {
             layer.msg("已经是最后一页了!", {icon: 7});
             return false;
         }
@@ -70,7 +70,7 @@ function addBookCategory() {
         data: $("#addBookCategoryForm").serialize(),
         success: function (data) {
 
-            if (data.toString() == "true") {
+            if (data.toString() === "true") {
                 layer.msg("添加成功!", {icon: 1, time: 1500});
 
                 // 1500ms后 重新加载页面 , 将更改后的内容重新加载到页面

@@ -35,4 +35,9 @@ public class BookCategoryServiceImpl implements IBookCategoryService {
     public int deleteBookCategoryById(int bookCategoryId) {
         return bookCategoryMapper.deleteByPrimaryKey(bookCategoryId);
     }
+
+    @Override
+    public List<BookCategory> selectAllBookCategories(){
+        return bookCategoryMapper.selectAllBookCategories();
+    }
 }
