@@ -86,6 +86,11 @@ public class AdminController {
         model.addAttribute("page", page);
         return "admin/addCategory";
     }
+    @RequestMapping("/addCategory")
+    public String addCategory(@Param("categoryName") String categoryName) {
+        bookCategoryService.addBookCategory(categoryName);
+        return "redirect:/addCategoryPage?pageNum=1";
+    }
 
     /**
      * 返回查询状态页面

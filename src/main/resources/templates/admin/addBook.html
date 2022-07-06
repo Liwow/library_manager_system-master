@@ -9,7 +9,6 @@
 <div class="layui-layout layui-layout-admin">
 
     <div th:include="common/admin_header :: header"></div>
-
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
@@ -45,10 +44,10 @@
     </div>
 
     <div class="layui-body layui-container"
-         style="margin : 10px auto; padding:10px 16px ;border: 200px; width: 480px; height: 580px; background-color: #f2f2f2">
+         style="margin: 100px auto; padding:10px 16px ;border: 200px; width: 480px; height: 650px; background-color: #f2f2f2; border-radius: 15px; box-shadow: 8px 10px 3px 1px #3f41476e;">
 
         <hr class="layui-bg-blue">
-        <h2 style="text-align:center">添加书籍</h2>
+        <h2 style="text-align:center; font-family: 'Microsoft YaHei UI',sans-serif">添加书籍</h2>
         <hr class="layui-bg-blue">
 
         <div style="width: 420px; padding: 20px; margin: auto auto; background-color: #f2f2f2">
@@ -82,7 +81,7 @@
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">类 别</label>
-                    <div class="layui-input-inline">
+                    <div class="layui-input-inline" >
                         <select lay-verify="required" id="bookCategory" name="bookCategory">
                         </select>
                     </div>
@@ -100,14 +99,14 @@
                     <label class="layui-form-label">简 介</label>
                     <div class="layui-input-inline">
                     <textarea id="bookIntroduction" lay-verify="required" name="bookIntroduction" placeholder="请输入简介"
-                              class="layui-textarea "
+                              class="layui-textarea " style="resize:none;width: 190px;"
                               autocomplete="off"></textarea>
                     </div>
                 </div>
 
                 <!--lay-filter重要 , js 会用到-->
-                <div style="margin-left: 100px">
-                    <input type="submit" lay-filter="btn1" id="btn1" class="layui-btn" lay-submit="" value="添加图书">
+                <div style="position: relative">
+                    <input type="submit" lay-filter="btn1" id="btn1" class="layui-btn" lay-submit="" style="margin:0 auto;position: absolute; left: calc(50% - 46px)" value="添加图书">
                 </div>
 
             </form>

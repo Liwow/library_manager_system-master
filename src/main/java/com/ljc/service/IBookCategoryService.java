@@ -13,4 +13,6 @@ public interface IBookCategoryService {
     int deleteBookCategoryById(int bookCategoryId);
 
     List<BookCategory> selectAllBookCategories();
+
+    void addBookCategory(String bookCategoryName);
 }

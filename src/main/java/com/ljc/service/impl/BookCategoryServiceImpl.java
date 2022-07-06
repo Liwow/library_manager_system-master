@@ -40,4 +40,11 @@ public class BookCategoryServiceImpl implements IBookCategoryService {
     public List<BookCategory> selectAllBookCategories(){
         return bookCategoryMapper.selectAllBookCategories();
     }
+
+    @Override
+    public void addBookCategory(String bookCategoryName) {
+        BookCategory bookCategory = new BookCategory();
+        bookCategory.setCategoryName(bookCategoryName);
+        bookCategoryMapper.insert(bookCategory);
+    }
 }

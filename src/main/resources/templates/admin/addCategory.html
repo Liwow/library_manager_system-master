@@ -33,7 +33,7 @@
                 </li>
 
                 <li class="layui-nav-item ">
-                    <a class="" href="javascript:;">借阅信息</a>
+                    <a class="" href="javascript:">借阅信息</a>
                     <dl class="layui-nav-child">
                         <dd><a href="/allBorrowBooksRecordPage?pageNum=1">&emsp;&emsp;所有记录</a></dd>
                     </dl>
@@ -48,36 +48,12 @@
 
         <div class="layui-row">
 
-            <div class="layui-col-md4"><!--左半部分-->
-
-                <hr class="layui-bg-blue">
-                <h2 style="text-align:center">新建类别</h2>
-                <hr class="layui-bg-blue">
-
-                <form class="layui-form" id="addBookCategoryForm" >
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">类别</label>
-                        <input class="layui-input-inline layui-input" id="categoryName" autocomplete="off"
-                               placeholder="请输入类别名称" type="text" name="categoryName" lay-verify="required">
-                    </div>
-
-                    <input name="pageNum" value="1" style="display: none">
-
-                    <div style="margin-left: 100px">
-                        <input lay-filter="btn_addBookCategory" lay-submit="" id="btn_addBookCategory" type="submit"
-                               class="layui-btn " value="添加类别">
-                    </div>
-                </form>
-
-            </div>
-
-            <div class="layui-col-md6 layui-col-md-offset2 "><!--右半部分-->
+            <div class=""><!--右半部分-->
                 <hr class="layui-bg-blue">
                 <h2 style="text-align:center">已 有 类 别</h2>
                 <hr class="layui-bg-blue">
 
-                <table class="layui-table" lay-size="sm">
+                <table class="layui-table" lay-size="sm" style=" box-shadow: 8px 10px 3px 1px #3f41476e;">
                     <thead>
                     <tr>
                         <th>类别编号</th>
@@ -122,6 +98,30 @@
 
 
             </div>
+            <div class=""><!--左半部分-->
+
+                <hr class="layui-bg-blue">
+                <h2 style="text-align:center">新建类别</h2>
+                <hr class="layui-bg-blue">
+
+                <form class="layui-form" id="addBookCategoryForm" th:action="@{/addCategory}">
+                    <div style="position: relative">
+                        <div class="layui-form-item" style="margin: 0 auto; display: inline-block; position: absolute; left: calc(50% - 155px)">
+                            <label class="layui-form-label">类别</label>
+                            <input class="layui-input-inline layui-input" id="categoryName" autocomplete="off"
+                                   placeholder="请输入类别名称" type="text" name="categoryName" lay-verify="required">
+                            <input name="pageNum" value="1" style="display: none">
+                        </div>
+                        <div style="margin: 0 auto; position: absolute; left: calc(50% - 46px); top: 40px">
+                            <input lay-filter="btn_addBookCategory" lay-submit="" id="btn_addBookCategory" type="submit"
+                                   class="layui-btn " value="添加类别">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
 
         </div>
 

@@ -17,12 +17,14 @@
         }
 
         #login_form {
-            width: 400px;
+            width: 500px;
             height: 400px;
-            margin: 80px auto;
+            margin: 200px auto;
             padding: 30px;
-            background-color: #f2f2f2;
+            background-color: #fff6b0;
             opacity: 0.9;
+            border-radius: 15px;
+            box-shadow: 6px 6px 6px 4px rgba(68, 56, 26, 0.99);
         }
 
     </style>
@@ -33,13 +35,11 @@
     <div class="layui-container" id="login_form">
 
         <div>
-            <h1 style="color: red">图书管理系统</h1>
-            <br>
-            <h2>用户登录</h2>
-            <br>
+            <h1 style="color: red; text-align: center; font-family: 华文隶书,sans-serif; font-size: 40pt">图书管理系统</h1>
+
         </div>
 
-        <form class="layui-form" id="my_form" method="post" action="/userLogin">
+        <form class="layui-form" style="margin-top: 50px" id="my_form" method="post" action="/userLogin">
 
             <div class="layui-form-item">
                 <label class="layui-form-label">用户名:</label>
