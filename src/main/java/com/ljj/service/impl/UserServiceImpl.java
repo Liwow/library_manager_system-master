@@ -23,8 +23,6 @@ public class UserServiceImpl implements IUserService {
     @Resource
     private UserMapper userMapper;
     @Resource
-    private DepartmentMapper departmentMapper;
-    @Resource
     private BorrowingBooksMapper borrowingBooksMapper;
     @Resource
     private BookMapper bookMapper;
@@ -41,11 +39,6 @@ public class UserServiceImpl implements IUserService {
         return users;
     }
 
-    @Override
-    public List<Department> findAllDepts() {
-
-        return departmentMapper.selectByExample(new DepartmentExample());
-    }
 
     @Override
     public User userLogin(String userName, String password) {

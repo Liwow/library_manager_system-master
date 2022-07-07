@@ -36,17 +36,6 @@ public class UserTest {
     }
 
     @Test
-    public void findAllDepts(){
-        List<Department> depts=userService.findAllDepts();
-        if(null==depts){
-            System.out.println("null");
-        }else{
-            for(Department d:depts){
-                System.out.println(d.getDeptName());
-            }
-        }
-    }
-    @Test
     public void updateUserTest(){
         User user=new User();
 

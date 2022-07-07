@@ -74,15 +74,6 @@ public class UserController {
         return "true";
     }
 
-    /**
-     * 查找所有部门
-     */
-    @RequestMapping("/getDepts")
-    @ResponseBody
-    public List<Department> getDepts() {
-        List<Department> depts = userService.findAllDepts();
-        return depts;
-    }
 
 
     /**
@@ -139,7 +130,6 @@ public class UserController {
      * @param user
      * @param request
      * @return
-     * @author zbw
      * 更新用户信息
      */
     @RequestMapping("/updateUser")
