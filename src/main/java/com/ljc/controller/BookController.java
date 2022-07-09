@@ -54,7 +54,7 @@ public class BookController {
         List<BookCategory> categories = bookCategoryService.selectAllBookCategories();
         model.addAttribute("page", page);
         model.addAttribute("bookCategory", bookCategory);
-        model.addAttribute("categories",categories);
+        model.addAttribute("categories", categories);
         return "admin/showBooks";
     }
 
@@ -66,7 +66,7 @@ public class BookController {
      */
     @RequestMapping("/findBookByBookPartInfo")
     public String findBooksResultPage(@RequestParam("bookPartInfo") String bookPartInfo, Model model) {
-        
+
         List<BookVo> bookVos = bookService.selectBooksByBookPartInfo(bookPartInfo);
 
         model.addAttribute("bookList", bookVos);

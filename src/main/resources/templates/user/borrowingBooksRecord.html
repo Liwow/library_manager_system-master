@@ -18,7 +18,11 @@
             <ul class="layui-nav layui-nav-tree">
 
                 <li class="layui-nav-item layui-nav-itemed">
-                    <a class="" href="javascript:;">借阅管理</a>
+                    <a class="" href="javascript:;">
+                        <img src="/static/images/历史.svg"
+                             style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                        <span>借阅信息</span>
+                    </a>
                     <dl class="layui-nav-child">
                         <dd class="layui-this"><a href="/userBorrowBookRecord">&emsp;&emsp;借书记录</a></dd>
                         <dd><a href="/borrowingPage">&emsp;&emsp;借阅书籍</a></dd>
@@ -26,42 +30,58 @@
                 </li>
 
                 <li class="layui-nav-item ">
-                    <a class="" href="javascript:;">书籍管理</a>
+                    <a class="" href="javascript:;">
+                        <img src="/static/images/图书.svg"
+                             style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                        <span>书籍管理</span>
+                    </a>
                     <dl class="layui-nav-child">
                         <dd><a href="/userReturnBooksPage">&emsp;&emsp;归还书籍</a></dd>
                         <dd><a href="/findBookPage">&emsp;&emsp;查询书籍</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="/userMessagePage">个人信息</a></li>
+                <li class="layui-nav-item">
+                    <a href="/userMessagePage">
+                        <img src="/static/images/用户.svg"
+                             style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                        <span>个人信息</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 
     <div class="layui-body">
+        <div style="position: relative; width: 100%; height:100%; display: flex; flex-direction: column;">
+            <div style="width: 100%;height: 100%;position: absolute;left: 0;top:0;background: url('/static/images/bg.jpg') no-repeat;
+    background-size: cover;filter: blur(7px);"></div>
+            <div style="width: 100%;	height: 100%;position: absolute;	z-index: 5;">
+                <div class="layui-container" style="margin-top: 100px">
+                    <hr class="layui-bg-blue">
+                    <h3 style="text-align: center; font-size: xx-large"> 已 借 书 籍</h3>
+                    <hr class="layui-bg-blue">
+                    <table class="layui-table ">
+                        <thead>
+                        <tr>
+                            <th>书籍ID</th>
+                            <th>书名</th>
+                            <th>借书日期</th>
+                            <th>最晚还书日期</th>
+                        </tr>
+                        </thead>
 
-        <div class="layui-container">
-            <hr class="layui-bg-blue">
-            <h3 style="text-align: center; font-size: xx-large"> 已 借 书 籍</h3>
-            <hr class="layui-bg-blue">
-            <table class="layui-table ">
-                <thead>
-                <tr>
-                    <th>书籍ID</th>
-                    <th>书名</th>
-                    <th>借书日期</th>
-                    <th>最晚还书日期</th>
-                </tr>
-                </thead>
-
-                <tr th:each="borrowingBooks : ${borrowingBooksList}">
-                    <td><label th:text="${borrowingBooks.getBook().getBookId()}"></label></td>
-                    <td><label id="bookName" th:title="${borrowingBooks.getBook().getBookAuthor()}" href="#"
-                               th:text="${borrowingBooks.getBook().getBookName()}">Title ...</label></td>
-                    <td><label th:text="${borrowingBooks.getDateOfBorrowing()}"></label></td>
-                    <td><label th:text="${borrowingBooks.getDateOfReturn()}"></label></td>
-                </tr>
-            </table>
+                        <tr th:each="borrowingBooks : ${borrowingBooksList}">
+                            <td><label th:text="${borrowingBooks.getBook().getBookId()}"></label></td>
+                            <td><label href="#" id="bookName" th:text="${borrowingBooks.getBook().getBookName()}"
+                                       th:title="${borrowingBooks.getBook().getBookAuthor()}">Title ...</label></td>
+                            <td><label th:text="${borrowingBooks.getDateOfBorrowing()}"></label></td>
+                            <td><label th:text="${borrowingBooks.getDateOfReturn()}"></label></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
+
     </div>
 
 

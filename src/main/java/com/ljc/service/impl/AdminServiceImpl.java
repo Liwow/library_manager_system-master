@@ -1,9 +1,9 @@
 package com.ljc.service.impl;
 
-import com.ljc.model.*;
 import com.ljc.mapper.AdminMapper;
 import com.ljc.mapper.BookCategoryMapper;
 import com.ljc.mapper.BookMapper;
+import com.ljc.model.*;
 import com.ljc.service.IAdminService;
 import org.springframework.stereotype.Service;
 
@@ -48,7 +48,7 @@ public class AdminServiceImpl implements IAdminService {
         if (null == admin) {
             return null;
         }
-        
+
         for (Admin a : admin) {
             if (a.getAdminPwd().equals(password)) {
                 return a;

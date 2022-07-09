@@ -3,12 +3,14 @@
 <head>
     <footer th:fragment="header">
         <div class="layui-header">
-            <div class=" layui-nav " style="left: 925px; font-size: xx-large; color:#3d73ff;line-height: 60px;"> 图 书 管 理 系 统</div>
+            <div class=" layui-nav " style="text-align: center; font-size: xx-large; color:#3d73ff;line-height: 60px; font-family: 华文彩云,sans-serif">
+                图 书 管 理 系 统
+            </div>
             <!-- 头部区域（可配合layui已有的水平导航） -->
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
                     <a href="javascript:;">
-                        <img src="/static/images/user_image.jpg" class="layui-nav-img">
+                        <img class="layui-nav-img" src="/static/images/user_image.jpg">
                         <span th:text="${session.user.getUserName()}"></span>
                     </a>
                     <dl class="layui-nav-child">

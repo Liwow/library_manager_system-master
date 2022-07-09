@@ -86,6 +86,7 @@ public class AdminController {
         model.addAttribute("page", page);
         return "admin/addCategory";
     }
+
     @RequestMapping("/addCategory")
     public String addCategory(@Param("categoryName") String categoryName) {
         bookCategoryService.addBookCategory(categoryName);
@@ -156,7 +157,7 @@ public class AdminController {
     public String adminInfo() {
         return "admin/adminInfo";
     }
-    
+
     /**
      * 更新管理员信息
      *

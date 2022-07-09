@@ -1,7 +1,7 @@
 package com.ljc.service.impl;
 
-import com.ljc.model.BookCategory;
 import com.ljc.mapper.BookCategoryMapper;
+import com.ljc.model.BookCategory;
 import com.ljc.service.IBookCategoryService;
 import com.ljc.utils.page.Page;
 import org.springframework.stereotype.Service;
@@ -37,7 +37,7 @@ public class BookCategoryServiceImpl implements IBookCategoryService {
     }
 
     @Override
-    public List<BookCategory> selectAllBookCategories(){
+    public List<BookCategory> selectAllBookCategories() {
         return bookCategoryMapper.selectAllBookCategories();
     }
 

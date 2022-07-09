@@ -1,10 +1,10 @@
 package com.ljc.service.impl;
 
-import com.ljc.model.*;
-import com.ljc.model.Vo.BorrowingBooksVo;
 import com.ljc.mapper.BookMapper;
 import com.ljc.mapper.BorrowingBooksMapper;
 import com.ljc.mapper.UserMapper;
+import com.ljc.model.*;
+import com.ljc.model.Vo.BorrowingBooksVo;
 import com.ljc.service.IUserService;
 import com.ljc.utils.page.Page;
 import org.springframework.stereotype.Service;
@@ -30,26 +30,26 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public List<User> findUserByUserName(String userName) {
-        
+
         UserExample userExample = new UserExample();
         UserExample.Criteria criteria = userExample.createCriteria();
-        
+
         criteria.andUserNameEqualTo(userName);
         List<User> users = userMapper.selectByExample(userExample);
-        
+
         return users;
     }
 
 
     @Override
     public User userLogin(String userName, String password) {
-        
+
         List<User> users = findUserByUserName(userName);
-        
+
         if (null == users) {
             return null;
         }
-        
+
         for (User user : users) {
             if (user.getUserPwd().equals(password)) {
                 return user;
@@ -63,7 +63,7 @@ public class UserServiceImpl implements IUserService {
         //获取session对象中user对象
         User sessionUser = (User) request.getSession().getAttribute("user");
         user.setUserId(sessionUser.getUserId());
-        
+
         int n = userMapper.updateByPrimaryKey(user);
 
         if (n > 0) {

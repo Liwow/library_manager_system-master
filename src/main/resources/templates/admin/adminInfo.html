@@ -17,7 +17,11 @@
             <ul class="layui-nav layui-nav-tree">
 
                 <li class="layui-nav-item ">
-                    <a class="" href="javascript:;">书籍管理</a>
+                    <a class="" href="javascript:;">
+                        <img src="/static/images/图书.svg"
+                             style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                        <span>书籍管理</span>
+                    </a>
                     <dl class="layui-nav-child">
                         <dd><a href="/addBookPage">&emsp;&emsp;录入新书</a></dd>
                         <dd><a href="/addCategoryPage?pageNum=1">&emsp;&emsp;新建类别</a></dd>
@@ -26,7 +30,11 @@
                 </li>
 
                 <li class="layui-nav-item">
-                    <a class="" href="javascript:;">用户管理</a>
+                    <a class="" href="javascript:;">
+                        <img src="/static/images/档案.svg"
+                             style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                        <span>用户管理</span>
+                    </a>
                     <dl class="layui-nav-child">
                         <dd><a href="/showUsersPage?pageNum=1">&emsp;&emsp;查询用户</a></dd>
                         <dd><a href="/addUserPage">&emsp;&emsp;新增用户</a></dd>
@@ -34,81 +42,138 @@
                 </li>
 
                 <li class="layui-nav-item ">
-                    <a class="" href="javascript:;">借阅信息</a>
+                    <a class="" href="javascript:;">
+                        <img src="/static/images/历史.svg"
+                             style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                        <span>借阅信息</span>
+                    </a>
                     <dl class="layui-nav-child">
                         <dd><a href="/allBorrowBooksRecordPage?pageNum=1">&emsp;&emsp;所有记录</a></dd>
                     </dl>
                 </li>
 
-                <li class="layui-nav-item  layui-nav-itemed"><a class="" href="/adminInfoPage">个人信息</a></li>
+                <li class="layui-nav-item  layui-nav-itemed">
+                    <a class="" href="/adminInfoPage">
+                        <img src="/static/images/用户.svg"
+                             style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                        <span>个人信息</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
+    <div class="layui-body ">
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree">
 
-    <div class="layui-body layui-container" style="top: 100px">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;">
+                            <img src="/static/images/历史.svg"
+                                 style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                            <span>借阅信息</span>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/userBorrowBookRecord">&emsp;&emsp;借书记录</a></dd>
+                            <dd class="layui-this"><a href="/borrowingPage">&emsp;&emsp;借阅书籍</a></dd>
+                        </dl>
+                    </li>
 
-        <hr class="layui-bg-blue">
-        <h3 style="font-size: xx-large; text-align: center"> 管 理 员 信 息 </h3>
-        <hr class="layui-bg-blue">
-
-        <div class="layui-row">
-            <div class="layui-col-md8 layui-col-lg-offset2">
-                <table class="layui-table">
-                    <thead>
-                    <tr>
-                        <th>管理员id</th>
-                        <th>管理员姓名</th>
-                        <th>管理员邮箱</th>
-                        <th>管理员密码</th>
-                    </tr>
-                    </thead>
-
-                    <tr>
-                        <td><b th:text="${session.admin.getAdminId()}"></b></td>
-                        <td><b th:text="${session.admin.getAdminName()}"></b></td>
-                        <td><b th:text="${session.admin.getAdminEmail()}"></b></td>
-                        <td><b th:text="${session.admin.getAdminPwd()}"></b></td>
-                    </tr>
-                </table>
+                    <li class="layui-nav-item ">
+                        <a class="" href="javascript:;">
+                            <img src="/static/images/图书.svg"
+                                 style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                            <span>书籍管理</span>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/userReturnBooksPage">&emsp;&emsp;归还书籍</a></dd>
+                            <dd><a href="/findBookPage">&emsp;&emsp;查询书籍</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="/userMessagePage">
+                            <img src="/static/images/用户.svg"
+                                 style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                            <span>个人信息</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
+        <div style="position: relative; width: 100%; height:100%; display: flex; flex-direction: column;">
+            <div style="width: 100%;height: 100%;position: absolute;left: 0;top:0;background: url('/static/images/bg.jpg') no-repeat;
+    background-size: cover;filter: blur(7px);"></div>
+            <div style="width: 100%;	height: 100%;position: absolute;	z-index: 5;">
+                <div class="layui-body layui-container" style="top: 100px">
 
-        <div class="layui-row">
-            <button id="modify-admin" class="layui-btn" style="display: block; margin: 10px auto;">修改信息</button>
-        </div>
+                    <hr class="layui-bg-blue">
+                    <h3 style="font-size: xx-large; text-align: center"> 管 理 员 信 息 </h3>
+                    <hr class="layui-bg-blue">
 
-        <div id="window" title="修改信息" style="margin: 5%; display: none">
-            <form id="updateAdminForm" class="layui-form">
+                    <div class="layui-row">
+                        <div class="layui-col-md8 layui-col-lg-offset2">
+                            <table class="layui-table">
+                                <thead>
+                                <tr>
+                                    <th>管理员id</th>
+                                    <th>管理员姓名</th>
+                                    <th>管理员邮箱</th>
+                                    <th>管理员密码</th>
+                                </tr>
+                                </thead>
+
+                                <tr>
+                                    <td><b th:text="${session.admin.getAdminId()}"></b></td>
+                                    <td><b th:text="${session.admin.getAdminName()}"></b></td>
+                                    <td><b th:text="${session.admin.getAdminEmail()}"></b></td>
+                                    <td><b th:text="${session.admin.getAdminPwd()}"></b></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="layui-row">
+                        <button class="layui-btn" id="modify-admin" style="display: block; margin: 10px auto;">修改信息</button>
+                    </div>
+
+                    <div id="window" style="margin: 5%; display: none" title="修改信息">
+                        <form class="layui-form" id="updateAdminForm">
 
 
-                <div class="layui-form-item">
-                    <label class="layui-form-label">名字</label>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">名字</label>
 
-                    <div class="layui-input-block">
-                        <input type="text" name="adminName" th:value="${session.admin.getAdminName()}" id="name"
-                               class="layui-input">
+                                <div class="layui-input-block">
+                                    <input class="layui-input" id="name" name="adminName" th:value="${session.admin.getAdminName()}"
+                                           type="text">
+                                </div>
+                            </div>
+
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">邮箱</label>
+
+                                <div class="layui-input-block">
+                                    <input class="layui-input" id="email" name="adminEmail"
+                                           th:value="${session.admin.getAdminEmail()}"
+                                           type="text">
+                                </div>
+                            </div>
+
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">密码</label>
+
+                                <div class="layui-input-block">
+                                    <input class="layui-input" id="password" name="adminPwd"
+                                           th:value="${session.admin.getAdminPwd()}"
+                                           type="text">
+                                </div>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
-
-                <div class="layui-form-item">
-                    <label class="layui-form-label">邮箱</label>
-
-                    <div class="layui-input-block">
-                        <input type="text" name="adminEmail" th:value="${session.admin.getAdminEmail()}" id="email"
-                               class="layui-input">
-                    </div>
-                </div>
-
-                <div class="layui-form-item">
-                    <label class="layui-form-label">密码</label>
-
-                    <div class="layui-input-block">
-                        <input type="text" name="adminPwd" id="password" class="layui-input"
-                               th:value="${session.admin.getAdminPwd()}">
-                    </div>
-                </div>
-
-            </form>
+            </div>
         </div>
     </div>
 

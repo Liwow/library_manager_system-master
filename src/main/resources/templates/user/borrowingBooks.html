@@ -12,47 +12,69 @@
 
     <div th:include="common/user_header :: header"></div>
 
-    <div class="layui-side layui-bg-black">
-        <div class="layui-side-scroll">
-            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            <ul class="layui-nav layui-nav-tree">
+    <div class="layui-body ">
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree">
 
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a class="" href="javascript:;">借阅管理</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="/userBorrowBookRecord">&emsp;&emsp;借书记录</a></dd>
-                        <dd class="layui-this"><a href="/borrowingPage">&emsp;&emsp;借阅书籍</a></dd>
-                    </dl>
-                </li>
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;">
+                            <img src="/static/images/历史.svg"
+                                 style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                            <span>借阅信息</span>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/userBorrowBookRecord">&emsp;&emsp;借书记录</a></dd>
+                            <dd class="layui-this"><a href="/borrowingPage">&emsp;&emsp;借阅书籍</a></dd>
+                        </dl>
+                    </li>
 
-                <li class="layui-nav-item ">
-                    <a class="" href="javascript:;">书籍管理</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="/userReturnBooksPage">&emsp;&emsp;归还书籍</a></dd>
-                        <dd><a href="/findBookPage">&emsp;&emsp;查询书籍</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item"><a href="/userMessagePage">个人信息</a></li>
-            </ul>
+                    <li class="layui-nav-item ">
+                        <a class="" href="javascript:;">
+                            <img src="/static/images/图书.svg"
+                                 style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                            <span>书籍管理</span>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/userReturnBooksPage">&emsp;&emsp;归还书籍</a></dd>
+                            <dd><a href="/findBookPage">&emsp;&emsp;查询书籍</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="/userMessagePage">
+                            <img src="/static/images/用户.svg"
+                                 style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                            <span>个人信息</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="position: relative; width: 100%; height:100%; display: flex; flex-direction: column;">
+            <div style="width: 100%;height: 100%;position: absolute;left: 0;top:0;background: url('/static/images/bg.jpg') no-repeat;
+    background-size: cover;filter: blur(7px);"></div>
+            <div style="width: 100%;	height: 100%;position: absolute;	z-index: 5;">
+                <div class="layui-container" style="margin-top: 100px">
+
+                    <div class="layui-container layui-col-md6 ">
+                        <hr class="layui-bg-blue">
+                        <h3 style="text-align: center; font-size: xx-large"> 用 户 借 书 </h3>
+                        <hr class="layui-bg-blue">
+                    </div>
+
+                    <div>
+                        <input autocomplete="off" autofocus class=" layui-input-block" id="bookId"
+                               name="bookId" placeholder="请输入书籍编号" type="text">
+
+                        <button class="layui-btn layui-bg-blue" id="btn1">确认借书</button>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="layui-body layui-container">
-
-        <div class="layui-container layui-col-md6 ">
-            <hr class="layui-bg-blue">
-            <h3 style="text-align: center; font-size: xx-large"> 用 户 借 书 </h3>
-            <hr class="layui-bg-blue">
-        </div>
-
-        <div>
-            <input class=" layui-input-block" placeholder="请输入书籍编号" autocomplete="off" autofocus
-                   id="bookId" type="text" name="bookId">
-
-            <button class="layui-btn layui-bg-blue" id="btn1">确认借书</button>
-        </div>
-
-    </div>
 
 
     <div th:include="common/footer :: footer"></div>

@@ -14,7 +14,11 @@
         <div class="layui-side-scroll">
             <ul class="layui-nav layui-nav-tree">
                 <li class="layui-nav-item ">
-                    <a class="" href="javascript:;">书籍管理</a>
+                    <a class="" href="javascript:;">
+                        <img src="/static/images/图书.svg"
+                             style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                        <span>书籍管理</span>
+                    </a>
                     <dl class="layui-nav-child">
                         <dd><a href="/addBookPage">&emsp;&emsp;录入新书</a></dd>
                         <dd><a href="/addCategoryPage?pageNum=1">&emsp;&emsp;新建类别</a></dd>
@@ -22,7 +26,11 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item layui-nav-itemed">
-                    <a class="" href="javascript:;">用户管理</a>
+                    <a class="" href="javascript:;">
+                        <img src="/static/images/档案.svg"
+                             style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                        <span>用户管理</span>
+                    </a>
                     <dl class="layui-nav-child">
                         <dd><a href="/showUsersPage?pageNum=1">&emsp;&emsp;查询用户</a></dd>
                         <dd class="layui-this"><a href="/addUserPage">&emsp;&emsp;新增用户</a></dd>
@@ -30,51 +38,104 @@
                 </li>
 
                 <li class="layui-nav-item ">
-                    <a class="" href="javascript:">借阅信息</a>
+                    <a class="" href="javascript:;">
+                        <img src="/static/images/历史.svg"
+                             style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                        <span>借阅信息</span>
+                    </a>
                     <dl class="layui-nav-child">
                         <dd><a href="/allBorrowBooksRecordPage?pageNum=1">&emsp;&emsp;所有记录</a></dd>
                     </dl>
                 </li>
 
-                <li class="layui-nav-item"><a href="/adminInfoPage">个人信息</a></li>
+                <li class="layui-nav-item"><a href="/adminInfoPage">
+                    <img src="/static/images/用户.svg"
+                         style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                    <span>个人信息</span>
+                </a></li>
             </ul>
         </div>
     </div>
+    <div class="layui-body ">
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree">
 
-    <div style="margin : 30px auto; padding:40px 16px ;border: 200px; width: 400px; height: 550px; background-color: #f2f2f2; border-radius: 15px; box-shadow: 8px 10px 3px 1px #3f41476e;"
-         class="layui-container">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;">
+                            <img src="/static/images/历史.svg"
+                                 style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                            <span>借阅信息</span>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/userBorrowBookRecord">&emsp;&emsp;借书记录</a></dd>
+                            <dd class="layui-this"><a href="/borrowingPage">&emsp;&emsp;借阅书籍</a></dd>
+                        </dl>
+                    </li>
 
-        <hr class="layui-bg-blue">
-        <h1 style="text-align:center">新增用户</h1>
-        <hr class="layui-bg-blue" style="margin-bottom: 40px">
-
-        <form class="layui-form" id="addUserForm" action="#">
-
-            <div class="layui-form-item">
-                <label class="layui-form-label">用户名</label>
-                <input type="text" class="layui-input layui-input-inline" id="userName" autocomplete="off" autofocus
-                       name="userName" lay-verify="required"
-                       placeholder="请输入用户名"><br><br>
+                    <li class="layui-nav-item ">
+                        <a class="" href="javascript:;">
+                            <img src="/static/images/图书.svg"
+                                 style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                            <span>书籍管理</span>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/userReturnBooksPage">&emsp;&emsp;归还书籍</a></dd>
+                            <dd><a href="/findBookPage">&emsp;&emsp;查询书籍</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="/userMessagePage">
+                            <img src="/static/images/用户.svg"
+                                 style="width: 30px; height: 30px; margin-right: 10px; display: inline-block">
+                            <span>个人信息</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </div>
+        <div style="position: relative; width: 100%; height:100%; display: flex; flex-direction: column;">
+            <div style="width: 100%;height: 100%;position: absolute;left: 0;top:0;background: url('/static/images/bg.jpg') no-repeat;
+    background-size: cover;filter: blur(7px);"></div>
+            <div style="width: 100%;	height: 100%;position: absolute;	z-index: 5;">
+                <div class="layui-container"
+                           style="margin : 100px auto; padding:40px 16px ;border: 200px; width: 400px; height: 550px; background-color: #d0ebff; border-radius: 15px; box-shadow: 8px 10px 3px 1px #3f41476e;">
+
+                <hr class="layui-bg-blue">
+                <h1 style="text-align: center; font-size: xx-large">新增用户</h1>
+                <hr class="layui-bg-blue" style="margin-bottom: 40px">
+
+                <form action="#" class="layui-form" id="addUserForm">
+
+                    <div class="layui-form-item" style="height: 50px">
+                        <label class="layui-form-label">用户名</label>
+                        <input autocomplete="off" autofocus class="layui-input layui-input-inline" id="userName" lay-verify="required"
+                               name="userName" placeholder="请输入用户名"
+                               type="text"><br><br>
+                    </div>
 
 
-            <div class="layui-form-item">
-                <label class="layui-form-label">密码</label>
-                <input class="layui-input layui-input-inline" type="password" id="password"
-                       lay-verify="required" name="userPwd" placeholder="请输入密码">
+                    <div class="layui-form-item" style="height: 50px">
+                        <label class="layui-form-label">密码</label>
+                        <input class="layui-input layui-input-inline" id="password" lay-verify="required"
+                               name="userPwd" placeholder="请输入密码" type="password">
+                    </div>
+
+                    <div class="layui-form-item" style="height: 50px">
+                        <label class="layui-form-label">邮箱</label>
+                        <input class="layui-input layui-input-inline" id="email" lay-verify="email"
+                               name="userEmail" placeholder="请输入邮箱" type="text">
+                    </div>
+
+                    <div style="margin: 20px auto; height: 50px; width: auto">
+                        <input class="layui-btn layui-btn-radius" id="btn_addUser"
+                               lay-filter="btn_addUser" lay-submit="" style="margin: 0 auto; display: block" type="submit" value="添加用户">
+                    </div>
+                </form>
             </div>
-
-            <div class="layui-form-item">
-                <label class="layui-form-label">邮箱</label>
-                <input class="layui-input layui-input-inline" type="text" lay-verify="email"
-                       id="email" name="userEmail" placeholder="请输入邮箱">
             </div>
-
-            <div style="margin-left: 120px">
-                <input class="layui-btn layui-btn-radius" lay-filter="btn_addUser"
-                       id="btn_addUser" type="submit" lay-submit="" value="添加用户">
-            </div>
-        </form>
+        </div>
     </div>
 
     <div th:include="common/footer :: footer"></div>

@@ -1679,7 +1679,7 @@ a cite {
     line-height: 22px;
     border-left: 5px solid #7d5fff;
     border-radius: 0 2px 2px 0;
-    background-color: #f2f2f2
+    background-color: #d0ebff
 }
 
 .layui-quote-nm {
@@ -1776,7 +1776,7 @@ a cite {
     line-height: 42px;
     padding: 0 15px 0 35px;
     color: #333;
-    background-color: #f2f2f2;
+    background-color: #d0ebff;
     cursor: pointer;
     font-size: 14px;
     overflow: hidden
@@ -1998,7 +1998,7 @@ a cite {
 }
 
 .layui-btn-radius {
-    border-radius: 100px
+    border-radius: 5px
 }
 
 .layui-btn .layui-icon {
@@ -2289,7 +2289,7 @@ a cite {
 }
 
 .layui-form-select dl dd:hover {
-    background-color: #f2f2f2;
+    background-color: #d0ebff;
     -webkit-transition: .5s all;
     transition: .5s all
 }
@@ -2992,7 +2992,7 @@ a cite {
 }
 
 .layui-table tbody tr:hover, .layui-table thead tr, .layui-table-click, .layui-table-header, .layui-table-hover, .layui-table-mend, .layui-table-patch, .layui-table-tool, .layui-table-total, .layui-table-total tr, .layui-table[lay-even] tr:nth-child(even) {
-    background-color: #f2f2f2
+    background-color: #d0ebff
 }
 
 .layui-table td, .layui-table th, .layui-table-col-set, .layui-table-fixed-r, .layui-table-grid-down, .layui-table-header, .layui-table-page, .layui-table-tips-main, .layui-table-tool, .layui-table-total, .layui-table-view, .layui-table[lay-skin=line], .layui-table[lay-skin=row] {
@@ -3194,7 +3194,7 @@ a cite {
 }
 
 .layui-table-tool-panel li:hover {
-    background-color: #f2f2f2
+    background-color: #d0ebff
 }
 
 .layui-table-tool-panel li .layui-form-checkbox[lay-skin=primary] i {
@@ -3682,7 +3682,7 @@ body .layui-table-tips .layui-layer-content {
 }
 
 .layui-transfer-data li:hover {
-    background-color: #f2f2f2;
+    background-color: #d0ebff;
     transition: .5s all
 }
 
@@ -3802,7 +3802,7 @@ body .layui-table-tips .layui-layer-content {
 }
 
 .layui-nav .layui-nav-child a:hover {
-    background-color: #f2f2f2;
+    background-color: #d0ebff;
     color: #000
 }
 
@@ -4100,7 +4100,7 @@ body .layui-table-tips .layui-layer-content {
 }
 
 .layui-tab-card > .layui-tab-title {
-    background-color: #f2f2f2
+    background-color: #d0ebff
 }
 
 .layui-tab-card > .layui-tab-title li {
@@ -4571,7 +4571,7 @@ body .layui-util-face .layui-layer-content {
     line-height: 20px;
     border: 1px solid #ddd;
     border-left-width: 6px;
-    background-color: #F2F2F2;
+    background-color: #d0ebff;
     color: #333;
     font-family: Courier New;
     font-size: 12px

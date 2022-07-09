@@ -41,7 +41,7 @@ public class UserController {
     public String userLogin(@Param("userName") String userName,
                             @Param("password") String password, HttpServletRequest request) {
         User user = userService.userLogin(userName, password);
-        
+
         if (null != user) {
             // flag = 0 表示用户名密码校验成功  【用于前端校验】
             request.getSession().setAttribute("flag", 0);

@@ -104,7 +104,7 @@
     </delete>
     <insert id="insert" parameterType="com.ljc.model.User">
         insert into user (user_id, user_name, user_pwd,
-                            user_email)
+                          user_email)
         values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPwd,jdbcType=VARCHAR},
                 #{userEmail,jdbcType=VARCHAR})
     </insert>
@@ -190,7 +190,7 @@
         </set>
         where user_id = #{userId,jdbcType=INTEGER}
     </update>
-    
+
     <update id="updateByPrimaryKey" parameterType="com.ljc.model.User">
         update user
         set user_name  = #{userName,jdbcType=VARCHAR},

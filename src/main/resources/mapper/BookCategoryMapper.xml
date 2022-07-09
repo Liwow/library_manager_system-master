@@ -177,6 +177,7 @@
         from book_category
     </select>
     <select id="selectAllBookCategories" resultMap="BaseResultMap">
-        select category_name from book_category
+        select category_name
+        from book_category
     </select>
 </mapper>

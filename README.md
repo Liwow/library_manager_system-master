@@ -1,11 +1,11 @@
 # springboot-libraryManageSystem
 
->  图书管理系统 ，使用当前最为流行的 SpringBoot 框架，可作为springboot的入门项目练习使用，也可稍加改进做一个毕业设计项目。 
+> 图书管理系统 ，使用当前最为流行的 SpringBoot 框架，可作为springboot的入门项目练习使用，也可稍加改进做一个毕业设计项目。
 
-##  一、相关技术栈
+## 一、相关技术栈
 
 1. **前端：** Thymeleaf、Layui、Ajax、JQuery
-2. **后端** ： springboot , mybatis 
+2. **后端** ： springboot , mybatis
 3. **开发环境：** IDEA 、SpringBoot 2.3、Maven
 4. **数据库**：MySQL 5.7
 
@@ -21,11 +21,12 @@
 
 ## 二、主要功能
 
-
 ![架构图](assets/架构图.jpg)
 
-## 三、数据库表结构设计  
+## 三、数据库表结构设计
+
 ![db_table](assets/db_table.jpg)
+
 ## 四 、界面设计
 
 ### ①、登录界面
@@ -50,15 +51,11 @@
 
 ![searchBook](assets/searchBook.jpg)
 
-
-
 用户管理
 
 ![user_manager](assets/user_manager.jpg)
 
 ![addUser](assets/addUser.jpg)
-
-
 
 借阅信息
 
@@ -68,9 +65,7 @@
 
 ![adminInfo](assets/adminInfo.jpg)
 
-
-
-### ③、用户运行界面  
+### ③、用户运行界面
 
 用户登录首页
 
@@ -79,8 +74,6 @@
 用户借书记录
 
 ![借书记录](assets/借书记录.jpg)
-
-
 
 ![借阅书籍](assets/借阅书籍.jpg)
 
@@ -106,13 +99,13 @@
 
 3. 导入项目中 `/src/main/resources/db/library-manager-system.sql` 到 `express`库。
 
-     **使用 source 命令**  【也可通过图形化软件进行导入(如Navicat)】
+   **使用 source 命令**  【也可通过图形化软件进行导入(如Navicat)】
 
     ```powershell
     use library-manager-system; # 选择数据库
     source /your/path/library-manager-system.sql; # Source 导入
     ```
-	
+
 4. 编辑 `application-dev.yaml` 文件，修改数据库连接信息。
 
    ```yaml
